@@ -1,0 +1,98 @@
+.header {
+    width: 100vw;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    width: 95vw;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    &__header {
+        width: 175px;
+
+        & > a > img {
+            width: 100%;
+        }
+    }
+    &__links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        & > li {
+            margin: 0 0.5rem;
+
+            & > a {
+                color: var(--clr-grey-3);
+                font-size: 1rem;
+                text-transform: capitalize;
+                letter-spacing: var(--spacing);
+                padding: 0.5rem;
+                text-decoration: none;
+                &:hover {
+                    border-bottom: 2px solid var(--clr-primary-7);
+                }
+            }
+        }
+    }
+    &__add {
+        display: grid;
+        width: 225px;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        &__btn {
+            font-size: 1.5rem;
+            letter-spacing: var(--spacing);
+            color: var(--clr-grey-1);
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        &__auth {
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            background: transparent;
+            border-color: transparent;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--clr-grey-1);
+            letter-spacing: var(--spacing);
+        }
+    }
+    .cartInfo {
+        &__logo {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__value {
+            position: absolute;
+            top: -10px;
+            right: -16px;
+            background: var(--clr-primary-5);
+            width: 16px;
+            height: 16px;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 0.75rem;
+            color: var(--clr-white);
+            padding: 10px;
+        }
+    }
+}

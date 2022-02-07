@@ -1,0 +1,197 @@
+.productList {
+    &__desc {
+        display: grid;
+        grid-template-columns: auto auto 1fr auto;
+        align-items: center;
+        margin-bottom: 2rem;
+        column-gap: 2rem;
+        &__btn {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 0.5rem;
+            & > button {
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: var(--radius);
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            & > .active {
+                background: var(--clr-black);
+                color: var(--clr-white);
+            }
+        }
+        &__info {
+            color: var(--clr-grey-3);
+            text-transform: capitalize;
+        }
+        &__sort {
+            text-transform: capitalize;
+            .sort__select {
+                text-transform: capitalize;
+                border-color: transparent;
+                font-size: 1rem;
+                text-transform: capitalize;
+                padding: 0.25rem 0.5rem;
+                border: none;
+                margin-left: 10px;
+            }
+        }
+        & > hr {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid var(--clr-grey-8);
+        }
+    }
+    &__content.grid {
+        display: grid;
+        gap: 2rem 1.5rem;
+        grid-template-columns: repeat(3, 1fr);
+        .productDesc {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            &__img {
+                position: relative;
+                background: var(--clr-black);
+                border-radius: var(--radius);
+                width: 100%;
+                & > img {
+                    height: 175px;
+                    width: 100%;
+                    display: block;
+                    object-fit: cover;
+                    border-radius: var(--radius);
+                    transition: var(--transition);
+                }
+                & > a {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: var(--clr-primary-5);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    border-radius: 50%;
+                    transition: var(--transition);
+                    cursor: pointer;
+                    text-decoration: none;
+                    color: #fff;
+                    opacity: 0;
+                }
+                &:hover > img {
+                    opacity: 0.5;
+                }
+                &:hover > a {
+                    opacity: 1;
+                }
+            }
+            &__detail {
+                margin-top: 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                cursor: pointer;
+                & > h5 {
+                    font-weight: 400;
+                    font-size: 1rem;
+                    margin: 0;
+                    padding: 0;
+                }
+                & > p {
+                    color: var(--clr-primary-5);
+                    letter-spacing: var(--spacing);
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    } // end productList__content
+    &__content.stack {
+        display: grid;
+        row-gap: 3rem;
+        h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            text-transform: capitalize;
+        }
+        & > .productInfo {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            column-gap: 2rem;
+            -webkit-box-align: center;
+            align-items: center;
+            & > img {
+                display: block;
+                width: 300px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: var(--radius);
+                margin-bottom: 1rem;
+            }
+            & > div {
+                h5 {
+                    color: var(--clr-primary-6);
+                    margin-bottom: 0.75rem;
+                }
+                & > p {
+                    max-width: 45em;
+                    margin-bottom: 1rem;
+                }
+                & > a {
+                    font-size: 0.5rem;
+                    padding: 0.25rem 0.5rem;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    background: var(--clr-primary-5);
+                    color: var(--clr-primary-10);
+                    display: inline-block;
+                    letter-spacing: var(--spacing);
+                    font-weight: 400;
+                    transition: var(--transition);
+                    cursor: pointer;
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+                    border-radius: var(--radius);
+                    border-color: transparent;
+                    &:hover {
+                        color: var(--clr-primary-1);
+                        background: var(--clr-primary-7);
+                    }
+                }
+            }
+        }
+    }
+}
+.addToCart {
+    width: 100%;
+    margin-top: 0.5rem;
+    & > button {
+        cursor: pointer;
+        background-color: #eaded7;
+        border-radius: 0.5rem;
+        border: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 1rem;
+        padding: 0.5rem 1rem;
+        color: #795744;
+        text-transform: capitalize;
+        font-weight: 500;
+
+        &:hover {
+            transform: scale(1.02);
+            border: 2px solid #795744;
+            transition: all 0.25s ease-in-out;
+        }
+    }
+}

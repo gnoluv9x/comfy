@@ -1,0 +1,33 @@
+/* Main code */
+.loading {
+    height: 20px;
+    .line-loading {
+        width: 100%;
+        height: 0.5rem;
+        position: relative;
+        margin: 0 auto;
+    }
+    .line-loading:before {
+        content: "";
+        position: absolute;
+        right: auto;
+        left: 0;
+        height: 100%;
+        background-color: var(--clr-primary-5);
+        animation: lineLoading 1s forwards infinite linear;
+    }
+
+    @keyframes lineLoading {
+        0% {
+            right: 100%;
+        }
+        50% {
+            right: 0;
+            left: 0;
+        }
+        100% {
+            right: 0;
+            left: 100%;
+        }
+    }
+}

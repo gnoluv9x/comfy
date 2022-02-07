@@ -1,0 +1,23 @@
+.path {
+    background-color: var(--clr-primary-10);
+    width: 100%;
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    color: var(--clr-primary-1);
+    margin-top: 80px;
+
+    &__title {
+        width: 95vw;
+        margin: 0 auto;
+        max-width: var(--max-width);
+        font-size: 2rem;
+        text-transform: capitalize;
+        & a {
+            color: var(--clr-primary-3);
+            padding: 0.5rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+    }
+}

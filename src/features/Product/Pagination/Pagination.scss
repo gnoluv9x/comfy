@@ -1,0 +1,27 @@
+.pagination {
+    margin: 2rem auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    list-style-type: none;
+    &__item {
+        padding: 0.5rem 0.8rem;
+        border: 1px solid #f7f7f9;
+        color: #007bff;
+        user-select: none;
+        &.disable {
+            color: rgb(121, 119, 119);
+            background-color: rgb(190, 186, 186);
+            cursor: not-allowed;
+        }
+        &:not(.disable):hover {
+            cursor: pointer;
+            background-color: #6c757d12;
+        }
+        &.active {
+            border: 3px solid #007bff;
+        }
+    }
+}
